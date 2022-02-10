@@ -12,25 +12,47 @@ class BinaryTree:
     def __init__(self, root):
         self.root = Node(root)
 
-    def print_preorder(self, start, traversal):
+    # Breadth First Search algorithm start from top and move down each height
+    def breadthfirstprint(self, start):
         if start:
-            traversal += (str(start.data) + "-")
-            traversal = self.print_preorder(start.left, traversal)
-            traversal = self.print_preorder(start.right, traversal)
+            queue = [start]
+            while queue:
+                node = queue.pop(0)
+                if node:
+                    print(node.data, end = ' ')
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+    
+    # Depth First Search algorithm traverses a tree down one path first
+    def depthfirstprint(self, start, type):
+        if type == "Pre-Order":
+            print(self.preorder(start, ""))
+        elif type == "In-Order":
+            print(self.preorder(start, ""))
+        elif type == "Post-Order":
+            print(self.preorder(start, ""))
+
+
+    def preorder(self, start, traversal):
+        if start:
+            traversal += (str(start.data) + " ")
+            traversal = self.preorder(start.left, traversal)
+            traversal = self.preorder(start.right, traversal)
         return traversal
     
-    def print_inorder(self, start, traversal):
+    def inorder(self, start, traversal):
         if start:
-            traversal = self.print_inorder(start.left, traversal)
-            traversal += (str(start.data) + "-")
-            traversal = self.print_inorder(start.right, traversal)
-        return traversal
+            traversal = self.inorder(start.left, traversal)
+            traversal += (str(start.data) + " ")
+            traversal = self.inorder(start.right, traversal)
+        return traversal    
     
-    
-    def print_postorder(self, start, traversal):
+    def postorder(self, start, traversal):
         if start:
-            traversal = self.print_postorder(start.left, traversal)
-            traversal = self.print_postorder(start.right, traversal)
-            traversal += (str(start.data) + "-")
+            traversal = self.postorder(start.left, traversal)
+            traversal = self.postorder(start.right, traversal)
+            traversal += (str(start.data) + " ")
         return traversal
 
