@@ -5,6 +5,11 @@ Commonly used data structures to be used as templates to bootstrap any projects 
 #### Singly Linked List
 #### Binary Tree
 
+# How To Test
+Run the following command on root folder:
+> python -m test.test_singlylinkedlist.py
+
+
 # Description
 ## Singly Linked List
 Singly Linked List is a linear data structure that connects nodes using a reference. Nodes are chained together sequentially by holding a reference to the node that was connected previously.
