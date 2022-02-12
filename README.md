@@ -19,5 +19,8 @@ In this implementation, there are operations like search, insert, insert at posi
 Binary tree is a tree-like data structure that connects a parent node to at most two children nodes. This type of data structure is great for searching and sorting. 
 In this implementation, there are operations like print pre-order, in-order, and post-order.
 
+## Graph
+Graph is a non-linear data structure with nodes (vertices) and edges. Unlike a binary tree there is no root node that is hierarchical. Graphs have vertices that are interconnected to each other that can be cycled.
+
 # Unit Tests
-Currently under development
+Currently under development...
