@@ -4,6 +4,7 @@ Commonly used data structures to be used as templates to bootstrap any projects 
 # Contents
 #### Singly Linked List
 #### Binary Tree
+#### Graph
 
 # How To Test
 Run the following command on root folder:
